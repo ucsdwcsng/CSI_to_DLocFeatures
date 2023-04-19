@@ -1,0 +1,8 @@
+# temp files
+*.asv
+
+# data files
+*.mat
+*.csv
+*.dat
+*.txt
