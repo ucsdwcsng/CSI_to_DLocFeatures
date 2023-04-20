@@ -24,6 +24,6 @@ temp = h*exp(d_rep);
 theta_rep = const2*((1:size(h,1)).*repmat(sin(theta_vals'),1,size(h,1)));
 
 MP = exp(theta_rep)*(temp);
-MP = abs(MP)./abs(MP(:));
+MP = abs(MP)./max(abs(MP(:)));
         
 end
