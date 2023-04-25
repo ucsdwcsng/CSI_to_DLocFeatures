@@ -25,9 +25,9 @@ n_ap=length(ap);
 features = zeros(n_ap,length(d2),length(d1));
 for j=1:n_ap
     if ap_index==3
-        P = compute_multipath_profile2d_fast_edit(squeeze(channels(:,:,j)),theta_vals,d_vals,opt);
+        P = compute_2D_multipath_profile(squeeze(channels(:,:,j)),theta_vals,d_vals,opt);
     elseif ap_index==2
-        P = compute_multipath_profile2d_fast_edit(squeeze(channels(:,j,:)),theta_vals,d_vals,opt);
+        P = compute_2D_multipath_profile(squeeze(channels(:,j,:)),theta_vals,d_vals,opt);
     end
     P_out = convert_multipathProfile_to_xy(P,theta_vals,d_vals,d1,d2,ap{j});
     features(j,:,:) = abs(P_out)./abs(P_out(:));
