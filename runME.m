@@ -9,8 +9,8 @@ load(fullfile(CHAN_DATA_DIR, DATASET_NAME));
 
 D_VALS = -10:0.1:30;
 THETA_VALS = -pi/2:0.01:pi/2;
-x_len = length(d1);
-y_len = length(d2);
+x_len = length(xLabels);
+y_len = length(yLabels);
 ap_index = 3;
 
 [n_datapoints, n_freq, n_ant, n_ap] = size(channels);
